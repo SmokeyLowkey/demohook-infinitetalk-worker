@@ -9,7 +9,7 @@
   "2": {
     "class_type": "MultiTalkModelLoader",
     "inputs": {
-      "model": "InfiniteTalk_single.safetensors",
+      "model": "infinitetalk.safetensors",
       "base_precision": "bf16",
       "wav2vec_path": "wav2vec"
     }
@@ -17,7 +17,7 @@
   "3": {
     "class_type": "LoadWanVideoT5TextEncoder",
     "inputs": {
-      "t5_model": "umt5_xxl_bf16.safetensors",
+      "t5_model": "umt5_xxl_fp16.safetensors",
       "precision": "bf16"
     }
   },

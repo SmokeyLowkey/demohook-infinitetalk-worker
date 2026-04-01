@@ -53,13 +53,13 @@ RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
 
 # Wan2.1 T5 text encoder (~5GB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
-    -O /comfyui/models/text_encoders/umt5_xxl_bf16.safetensors \
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_bf16.safetensors"
+    -O /comfyui/models/text_encoders/umt5_xxl_fp16.safetensors \
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors"
 
 # InfiniteTalk / MultiTalk audio-conditioning weights (~500MB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
-    -O /comfyui/models/diffusion_models/InfiniteTalk_single.safetensors \
-    "https://huggingface.co/MeiGen-AI/InfiniteTalk/resolve/main/InfiniteTalk_single.safetensors"
+    -O /comfyui/models/diffusion_models/infinitetalk.safetensors \
+    "https://huggingface.co/MeiGen-AI/InfiniteTalk/resolve/main/single/infinitetalk.safetensors"
 
 # chinese-wav2vec2-base audio encoder (full HuggingFace model directory ~400MB)
 RUN pip install --no-cache-dir huggingface_hub && \
