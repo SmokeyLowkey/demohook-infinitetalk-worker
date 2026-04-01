@@ -2,7 +2,7 @@
   "1": {
     "class_type": "WanVideoModelLoader",
     "inputs": {
-      "model": "wan2.1_i2v_480p_14B_bf16.safetensors",
+      "model": "wan2.1_i2v_480p_14B_fp16.safetensors",
       "base_precision": "bf16"
     }
   },
@@ -17,7 +17,7 @@
   "3": {
     "class_type": "LoadWanVideoT5TextEncoder",
     "inputs": {
-      "t5_model": "umt5-xxl-enc-bf16.safetensors",
+      "t5_model": "umt5_xxl_bf16.safetensors",
       "precision": "bf16"
     }
   },
@@ -30,7 +30,7 @@
   "5": {
     "class_type": "CLIPVisionLoader",
     "inputs": {
-      "clip_name": "wan2.1_i2v_clip_vision.safetensors"
+      "clip_name": "clip_vision_h.safetensors"
     }
   },
   "10": {

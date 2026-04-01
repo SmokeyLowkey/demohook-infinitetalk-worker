@@ -38,8 +38,8 @@ RUN mkdir -p /comfyui/models/diffusion_models \
 
 # Wan2.1 Image-to-Video 14B model (480P variant — ~25GB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
-    -O /comfyui/models/diffusion_models/wan2.1_i2v_480p_14B_bf16.safetensors \
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_bf16.safetensors"
+    -O /comfyui/models/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors \
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors"
 
 # Wan2.1 VAE (~200MB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
@@ -48,13 +48,13 @@ RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
 
 # Wan2.1 CLIP vision encoder (~1GB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
-    -O /comfyui/models/clip_vision/wan2.1_i2v_clip_vision.safetensors \
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/wan2.1_i2v_clip_vision.safetensors"
+    -O /comfyui/models/clip_vision/clip_vision_h.safetensors \
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
 
 # Wan2.1 T5 text encoder (~5GB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
-    -O /comfyui/models/text_encoders/umt5-xxl-enc-bf16.safetensors \
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5-xxl-enc-bf16.safetensors"
+    -O /comfyui/models/text_encoders/umt5_xxl_bf16.safetensors \
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_bf16.safetensors"
 
 # InfiniteTalk / MultiTalk audio-conditioning weights (~500MB)
 RUN wget -c -t 0 --timeout=60 --waitretry=10 --retry-connrefused \
